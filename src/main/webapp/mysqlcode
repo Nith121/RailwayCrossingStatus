@@ -1,0 +1,70 @@
+create database railways;
+use railways;
+CREATE TABLE user(
+
+unameVARCHAR(45) NOT NULL,
+email VARCHAR(45) NOT NULL,
+password VARCHAR(45) NOT NULL,
+PRIMARY KEY (uname));
+
+INSERT INTO user (uname, email, password)
+VALUES ('jane_smith', 'jane@example.com', 'password456');
+
+INSERT INTO user (uname, email, password)
+VALUES ('alex_wilson', 'alex@example.com', 'qwerty123');
+
+INSERT INTO user (uname, email, password)
+VALUES ('emma_davis', 'emma@example.com', 'abcd1234');
+
+INSERT INTO user (uname, email, password)
+VALUES ('annu', 'annu@gmail.com', 'annu123');
+
+INSERT INTO user (uname, email, password)
+VALUES ('nithish', 'nith@gmail.com', 'nith123');
+
+CREATE TABLE admin (
+unameVARCHAR(45) NOT NULL,
+password VARCHAR(45) NOT NULL,
+PRIMARY KEY (uname));
+
+insert into admin values ('Admin', '1234567');
+insert into admin values ('Priyanth', '12345');
+insert into admin values ('Pandu','123456');
+insert into admin values ('Aliya', '12345678');
+
+
+CREATE TABLE railways.adminhome(
+id INT NOT NULL auto_increment , Name VARCHAR(45) NOT NULL,
+Address VARCHAR(45) NOT NULL,
+Landmark VARCHAR(45) NOT NULL, Trainschedule TIME NOT NULL,
+pnameVARCHAR(45) NOT NULL,
+status VARCHAR(45) NOT NULL, 
+UNIQUE INDEX id_Unique (id ASC) VISIBLE,
+PRIMARY KEY(id));
+
+INSERT INTO railways.adminhome (Name, Address, Landmark, Trainschedule, pname, status)
+VALUES ('John', '123 Main St', 'Central Park', '09:00:00', 'Project A', 'Active');
+
+INSERT INTO railways.adminhome (Name, Address, Landmark, Trainschedule, pname, status)
+VALUES ('Jane', '456 Elm St', 'Downtown Square', '13:30:00', 'Project B', 'Inactive');
+
+INSERT INTO railways.adminhome (Name, Address, Landmark, Trainschedule, pname, status)
+VALUES ('Alex', '789 Oak St', 'City Center', '18:45:00', 'Project C', 'Active');
+
+INSERT INTO railways.adminhome (Name, Address, Landmark, Trainschedule, pname, status)
+VALUES ('Emma', '567 Pine St', 'West End', '22:15:00', 'Project D', 'Inactive');
+
+CREATE TABLE favorites( Address VARCHAR(255),
+id INT PRIMARY KEY,
+Name VARCHAR(255),
+Landmark VARCHAR(255),
+TrainscheduleVARCHAR(255), pname VARCHAR(255),
+status VARCHAR(255)
+);
+
+
+
+
+
+
+
